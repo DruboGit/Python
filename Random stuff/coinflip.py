@@ -5,15 +5,17 @@ coin = random.randint(1,2)
 while True:
     os.system("cls")
     guess = input ("Heads or Tails?\n")
-    if guess == str("Heads"):
+    if guess.lower() == "heads":
         g = 1
+        guess = "Heads"
         break
-    elif guess == str("Tails"):
+    elif guess.lower() == "tails":
         g = 2
+        guess = "Tails"
         break
     else:
         input ("Not a valid answer!")
-if guess == str("Heads"):
+if guess == "Heads":
     nguess = "Tails"
 else:
     nguess = "Heads"
