@@ -56,6 +56,10 @@ while True:
         os.system("cls")
         number2 = input ("First number: " + number1 + "\nSecond number: ")
         os.system("cls")
+        if int(number2) == 0:
+            print ("You can't divide by zero!")
+            input()
+            continue
         answer = division (number1, number2)
         print ("First number: " + number1 + "\nSecond number: " + number2 + "\nAnswer: " + str(answer))
         exit = input ("\nExit(1)  Go back(2)\n")
