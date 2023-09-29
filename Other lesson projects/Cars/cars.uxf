@@ -1,0 +1,17 @@
+<diagram program="umletino" version="15.1"><zoom_level>10</zoom_level><help_text>Car
+</help_text><element><id>UMLClass</id><coordinates><x>240</x><y>110</y><w>110</w><h>80</h></coordinates><panel_attributes>cars
+--
+carlist[car]
+looping:boolean
+--
+main()</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>440</x><y>90</y><w>200</w><h>150</h></coordinates><panel_attributes>Car
+--
+fabricator: string
+color: string
+storage: int
+--
+_init_constructor()
+setFabricate(str)
+getFabricate(): str
+getStorage(): int
+getColor(): str</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>340</x><y>150</y><w>120</w><h>40</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>100;10;10;20</additional_attributes></element></diagram>
