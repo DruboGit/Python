@@ -4,6 +4,15 @@ import random as r
 
 sqlconnect = None
 cursor = None
+prizes = [
+    "One aglet",
+    "Cat ears (stolen from Nils)",
+    "One snowball (incoming at 299 792 458 m/s)",
+    "Half a skateboard",
+    "A double A battery",
+    "Crusty sock",
+    "Ticket for 9/11 recreation"
+]
 
 def p_start():
     while True:
@@ -109,14 +118,35 @@ def practice():
     if amount == 0:
         input ("Sorry this list does not have any words. Please try with another list")
     else:
-        rand = r.randint(1,amount)
-        cursor.execute(f"SELECT word FROM {select} WHERE id = {rand}")
-        word = cursor.fetchone()[0]
-        cursor.execute(f"SELECT translation FROM {select} WHERE id = {rand}")
-        trans = cursor.fetchone()[0]
-        input(f"{word}, {trans}")
-        cls()
-        #input(f"Please translate {cursor.fetchone()[0]}\n")
+        words = {}
+        num = 0
+        cursor.execute(f"SELECT * from {select} ORDER by id")
+        temp = cursor.fetchall()
+        for row in temp:
+            word = row[1]
+            trans = row[2]
+            print(row[1])
+            words[word] = trans
+            num += 1
+        while True:
+            cls()
+            if len(words) == 0:
+                input(f"Yay! You have cleared your list of words! Here is a prize: {r.choice(prizes)}")
+                break
+            else:
+                word, trans = r.choice(list(words.items()))
+                while True:
+                    cls()
+                    guess = input (f"Please translate this word:  {word}    Words left: {num}\n")
+                    if trans.lower() == guess.lower():
+                        cls()
+                        input (f"Yippe! You got it right!             Words left: {num}\n")
+                        words.pop(word)
+                        num -= 1
+                        break
+                    else:
+                        input("Nope! Try again!")
+
         
 def cls():
     os.system("cls")
