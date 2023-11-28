@@ -1,5 +1,6 @@
 import os
 import datetime as dt
+import calendar as c
 
 today = dt.date.today()
 year = list(str(today.year))
@@ -42,7 +43,7 @@ def num10():
         birth_y = (f"19{birth_y}")
     else:
         birth_y = (f"20{birth_y}")
-    birth_m = (f"{sssn2[2]}{sssn2[3]}")
+    birth_m = c.month_name[int(f"{sssn2[2]}{sssn2[3]}")]
     birth_d = (f"{sssn2[4]}{sssn2[5]}")
     i = 0
     while i < 9:
@@ -61,7 +62,7 @@ def num10():
         sum += i
     check = (10-(sum%10))%10
     if check == last_num:
-        input (f"\nThis SSSN is valid!\nGender: {gender}\nBirth Year: {birth_y}\nBirth Month: {birth_m}\nBirth Day: {birth_d}")
+        input (f"\nThis SSSN is valid!\nSex: {gender}\nBirth Year: {birth_y}\nBirth Month: {birth_m}\nBirth Day: {birth_d}")
     else:
         input ("No. This SSSN is not valid!")
 
