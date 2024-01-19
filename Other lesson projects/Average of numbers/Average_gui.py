@@ -1,5 +1,18 @@
+import tkinter as tk
+
+root = tk.Tk()
+root.title("Average")
+
 def main():
-    number = input ("Which numbers would you like to smooth out?\n")
+    global entry
+    tk.Label(text="Which numbers would you like to smooth out?").grid(sticky=tk.W, row=0, column=0)
+    entry = tk.Entry(width=20)
+    entry.grid(row=1, column=0)
+    tk.Button(text="Enter", command=run).grid(row=2, column=0)
+    root.mainloop()
+
+def run():
+    number = entry.get()
     split_number = number.split(" ")
     i=0
     finished = []
@@ -13,6 +26,7 @@ def main():
         i+=1
     finished.append(split_number[len(split_number)-1])
     output = " ".join(finished)
-    input (f"Your finished product: {output}")
+    tk.Label(text=f"Here is your finished product: {output}").grid(row=3, column=0)
+
 
 main()
