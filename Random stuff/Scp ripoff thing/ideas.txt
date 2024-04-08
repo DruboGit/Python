@@ -1,0 +1,10 @@
+people that want to write "scps" = site  directors
+	They get to choose the site number and if they want they can also give it a nickname
+Database with creatures, objects, site inventory, logins
+
+
+
+
+
+
+html thing, move element 1 pixel and universe starts collapsing
