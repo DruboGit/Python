@@ -30,7 +30,7 @@ def mainpage():
     Label(text=" ",pady=3).grid(row=0,column=0)
     Label(text=f"User: {username}").place(x=5,y=0)
     Label(text=f"Rank: Site Director").place(x=240,y=0)
-    new_entry = Button(text="New Entry",state=DISABLED)
+    new_entry = Button(text="New Entry",command=new_entry ,state=DISABLED)
     new_entry.grid(row=1,column=0)
     creature_list = Button(text="Creature List",state=DISABLED)
     creature_list.grid(row=1,column=1)
@@ -40,6 +40,9 @@ def mainpage():
     logs.grid(row=1,column=3)
     site_administration = Button(text="Administration",state=DISABLED)
     site_administration.grid(row=1,column=4)
+
+def new_entry():
+    
 
 def pdf(file):
     root.geometry('820x700')
