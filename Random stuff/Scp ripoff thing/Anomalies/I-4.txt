@@ -1,0 +1,11 @@
+Anomaly Index: I-4
+
+Anomaly Containment Level: Omicron
+
+Status: Uncontained // Possibly uncontainable
+
+Containment Procedure: N/A
+
+Description: Item 4 is a small object of currently unknown nature. When observed it will immediately teleport out of view
+
+Documentation: N/A

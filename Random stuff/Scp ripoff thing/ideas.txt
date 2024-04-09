@@ -1,7 +1,14 @@
 people that want to write "scps" = site  directors
 	They get to choose the site number and if they want they can also give it a nickname
-Database with creatures, objects, site inventory, logins
+Database with entities, objects, site inventory, logins
 
+Subjects: S-2996
+Documents: D-2996-1
+Entity: E-2996
+Item: I-2996
+
+Containment Levels: Undefined, Iota, Epsilon, Omicron                          (shitty classes(Zikher, Durus, Asper))
+Status: Contained, Uncontained, Nullified
 
 
 

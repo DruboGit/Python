@@ -1,0 +1,11 @@
+Anomaly Index: E-6
+
+Anomaly Containment Level: Iota
+
+Status: Contained
+
+Containment Procedure: Place in any box
+
+Description: Entity 6 is a 10 cm tall humanoid.
+
+Documentation: N/A
