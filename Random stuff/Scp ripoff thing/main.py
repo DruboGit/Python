@@ -27,9 +27,11 @@ def mainpage():
     for i in root.winfo_children():
         i.destroy()
     root.geometry('350x100')
-    Label(text=" ",pady=3).grid(row=0,column=0)
+    Label(text=" ",pady=12).grid(row=0,column=0)
     Label(text=f"User: {username}").place(x=5,y=0)
     Label(text=f"Rank: Site Director").place(x=240,y=0)
+    Label(text="Site Id: Site-1").place(x=240,y=15)
+    Label(text="Site Nickname: Experimental").place(x=5,y=15)
     new_entry = Button(text="New Entry",command=new_entry_fun)
     new_entry.grid(row=1,column=0)
     anomaly_list = Button(text="Anomaly List",state=DISABLED)
