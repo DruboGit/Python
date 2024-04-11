@@ -31,10 +31,9 @@ def mainpage():
     Label(text=f"User: {username}").place(x=5,y=0)
     Label(text=f"Rank: Site Director").place(x=240,y=0)
     Label(text="Site Id: Site-1").place(x=240,y=15)
-    Label(text="Site Nickname: Experimental").place(x=5,y=15)
     new_entry = Button(text="New Entry",command=new_entry_fun)
     new_entry.grid(row=1,column=0)
-    anomaly_list = Button(text="Anomaly List",state=DISABLED)
+    anomaly_list = Button(text="Anomaly List",command=a_list)
     anomaly_list.grid(row=1,column=1)
     site_inventory = Button(text="Site Inventory",state=DISABLED)
     site_inventory.grid(row=1,column=2)
@@ -85,12 +84,14 @@ def e_entry():
     file.close()
     mainpage()
 
+def a_list():
+    pass
+
 def administration():
     for i in root.winfo_children():
         i.destroy()
     Button(text="Back", command=mainpage).grid(row=0,column=0)
     Button(text="Site Id Change").grid(row=1,column=1)
-    Button(text="Site Nickname Change").grid(row=1,column=2)
 
 def pdf(file):
     root.geometry('820x700')
