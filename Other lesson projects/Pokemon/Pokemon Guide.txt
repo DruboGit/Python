@@ -1,0 +1,41 @@
+Class
+	Pokémon
+		number : int - Pokedex number
+		name : String - Namnet på Pokémonen
+		element : List - Lista med alla typer i String typ (Får inte heta type för namnet är redan taget)
+		Stats : Class
+		
+	Stats
+		Health : int
+		Attack : int
+		Defense : int
+		Sp. Defence : int
+		Sp. Attack : int
+		Speed : int
+			
+	Trainer
+		Name : String
+		Gender : String
+		Age : int
+		Inventory :
+		Party : List 
+
+Types
+    Normal
+    Fire
+    Water
+    Electric
+    Grass
+    Ice
+    Fighting
+    Poison
+    Ground
+    Flying
+    Psychic
+    Bug
+    Rock
+    Ghost
+    Dragon
+    Dark
+    Steel
+    Fairy
