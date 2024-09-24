@@ -5,7 +5,7 @@ for i in range(50):
     auto.press("volumeup")
 auto.press("win")
 t.sleep(0.2)
-auto.typewrite("google chrome")
+auto.typewrite("firefox")
 auto.press("enter")
 t.sleep(1)
 auto.typewrite(rickroll)
